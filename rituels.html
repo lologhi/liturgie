@@ -1,0 +1,40 @@
+<ons-page id='rituels'>
+	<ons-toolbar class='barre-menu'>
+		<div class="left">
+			<ons-toolbar-button onclick="Charge_page('accueil.html')">
+				<ons-icon icon="md-home"></ons-icon>
+			</ons-toolbar-button>
+		</div>
+		<div class="center">
+			Rituels catholiques
+		</div>
+	</ons-toolbar>
+
+	<ons-card class="cadre">
+
+		<p class="rouge">Non encore disponible...</p>
+		<ons-list>
+			<ons-list-header>Prêtres</ons-list-header>
+			<ons-list-item onclick="Charge_page('confession.html')" tappable>
+				<div class="center">Sacrement de réconciliation</div>
+			</ons-list-item>
+			<ons-list-item onclick="Charge_page('malade-urgent.html')" tappable>
+				<div class="center">Sacrement des malades (urgence)</div>
+			</ons-list-item>
+			<ons-list-item onclick="Charge_page('malade.html')" tappable>
+				<div class="center">Sacrement des malades</div>
+			</ons-list-item>
+			<ons-list-header>Prêtres et diacres</ons-list-header>
+			<ons-list-item onclick="Charge_page('benediction.html')" tappable>
+				<div class="center">Eucharistie en dehors de la messe</div>
+			</ons-list-item>
+			<ons-list-item onclick="Charge_page('benediction.html')" tappable>
+				<div class="center">Bénédiction d'une maison</div>
+			</ons-list-item>
+
+		</ons-list>
+
+		<script>
+			Initialisation_parametres();
+		</script>
+</ons-page>

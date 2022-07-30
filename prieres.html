@@ -1,0 +1,34 @@
+<ons-page id='prieres'>
+	<ons-toolbar class='barre-menu'>
+		<div class="left">
+			<ons-toolbar-button onclick="Charge_page('accueil.html')">
+				<ons-icon icon="md-home"></ons-icon>
+			</ons-toolbar-button>
+		</div>
+		<div class="center">
+			Prières chrétiennes
+		</div>
+	</ons-toolbar>
+
+	<ons-card class="cadre">
+
+		<ons-list>
+			<ons-list-header>À Dieu</ons-list-header>
+			<ons-list-item onclick="Charge_page('prieres/dieu.html')" tappable>
+				<div class="center">Prière à Dieu</div>
+			</ons-list-item>
+
+			<ons-list-header>Saints</ons-list-header>
+			<ons-list-item onclick="Charge_page('prieres/marie.html')" tappable>
+				<div class="center">Vierge Marie</div>
+			</ons-list-item>
+			<ons-list-item onclick="Charge_page('prieres/michel.html')" tappable>
+				<div class="center">Saint Michel</div>
+			</ons-list-item>
+
+		</ons-list>
+
+		<script>
+			Initialisation_parametres();
+		</script>
+</ons-page>

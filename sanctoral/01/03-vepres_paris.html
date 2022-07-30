@@ -1,0 +1,25 @@
+<script>
+var path_propre = 'sanctoral/01/03-';
+var propre = [
+	'v_hymne',
+	'v_antienne_1',
+	'v_antienne_cantique',
+	'v_antienne_2',
+	'v_capitule',
+	'v_repons',
+	'v_antienne_ev',
+	'v_intercession'
+];
+
+sessionStorage.setItem('v_titre_sanctoral', path_propre+'titre_paris.html');
+
+sessionStorage.setItem('v_psaume_1', '121');
+sessionStorage.setItem('v_psaume_2', '126');
+sessionStorage.setItem('v_cantique', '12');
+
+for (var i=0; i < propre.length; i++) {
+	sessionStorage.setItem(propre[i], path_propre+propre[i]+'.html');
+}
+
+sessionStorage.setItem('v_oraison', path_propre+'oraison.html');
+</script>

@@ -1,0 +1,29 @@
+<script>
+	var path_propre = 'sanctoral/01/25-';
+	var path_commun = 'sanctoral/apotres/';
+	var commun = ['v_hymne',
+		'v_intercession'
+	];
+	var propre = ['v_antienne_1',
+		'v_antienne_cantique',
+		'v_antienne_2',
+		'v_capitule',
+		'v_repons',
+		'v_antienne_ev'
+	];
+
+	sessionStorage.setItem('v_titre_sanctoral', path_propre+'titre.html');
+
+		sessionStorage.setItem('v_psaume_1', '115');
+		sessionStorage.setItem('v_psaume_2', '125');
+		sessionStorage.setItem('v_cantique', '4');
+
+	for (var i=0; i < propre.length; i++) {
+		sessionStorage.setItem(propre[i], path_propre+propre[i]+'.html');
+	}
+	for (var i=0; i < commun.length; i++) {
+		sessionStorage.setItem(commun[i], path_commun+commun[i]+'.html');
+	}
+
+	sessionStorage.setItem('v_oraison', path_propre+'oraison.html');
+</script>

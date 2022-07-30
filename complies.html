@@ -1,0 +1,95 @@
+<ons-page id='complies'>
+	<ons-toolbar class='barre-menu'>
+		<div class="left bouton_menu_g" onclick="Ouvre_menu_g()">
+			<ons-icon icon="md-menu"></ons-icon>&nbsp;&nbsp;Complies
+		</div>
+		<div class="center">
+			<div id="c_date" class="bouton_date"></div>
+		</div>
+		<div class="right">
+			<ons-toolbar-button onclick="Ouvre_menu()">
+				<ons-icon icon="md-settings"></ons-icon>
+			</ons-toolbar-button>
+		</div>
+	</ons-toolbar>
+
+	<ons-modal id='c_modal'>
+		<input type="text" id="c_calendrier" class="datepicker" name="c_calendrier" hidden/>
+	</ons-modal>
+
+	<ons-fab position="bottom right" modifier="mini" onclick="Plein_ecran();">
+		<ons-icon id='plein-ecran' icon="md-fullscreen">
+		</ons-icon>
+	</ons-fab>
+	<ons-card class="cadre">
+		<div id="c_titre_principal" class="center"></div>
+		<div id="c_titre_secondaire" class="center"></div>
+		<br>
+
+		<div id="c_option-div" style="display:none">
+			<br><p class="antienne rouge">Choisir une option&nbsp;:</p>
+			<select class="select-input" name="c_option" id="c_option">
+				<option value="8">Complies du dimanche</option>
+				<option value="7">Complies du samedi</option>
+			</select>
+			<br>
+		</div>
+
+		<div id="c_introduction"></div>
+
+		<div id="c_penitence">
+			<p class="antienne rouge">On peut commencer par une révision de la journée, ou par un acte pénitentiel dans la célébration commune.</p>
+		</div>
+		<h2>Hymne</h2>
+		<div id="c_hymne"></div>
+
+		<div id="c_titre_psaume_1"></div>
+		<div id="c_antienne_1"></div>
+		<div id="c_psaume_1"></div>
+		<br>
+		<div id="c_antienne_1b"></div>
+
+		<div id="c_titre_psaume_2"></div>
+		<div id="c_antienne_2"></div>
+		<div id="c_psaume_2"></div>
+		<br>
+		<div id="c_antienne_2b"></div>
+
+		<h2>Parole de Dieu</h2>
+		<div id="c_capitule"></div>
+
+		<div id="c_repons"></div>
+
+		<div id="c_titre_cantique_ev"></div>
+		<div id="c_antienne_ev"></div>
+
+		<div id="c_switch_div" class="droite espace-dessous">
+			<span class="switch-latin">Latin</span>
+			<ons-switch id='c_switch_latin'></ons-switch>
+		</div>
+
+		<div id="c_cantique_ev"></div>
+		<br>
+		<div id="c_antienne_evb"></div>
+
+		<h2>Prière</h2>
+		<div id="c_oraison"></div>
+
+		<h2>Bénédiction</h2>
+		<div id="c_benediction"></div>
+
+		<h2>Antienne mariale</h2>
+		<div id="c_select-marie-div">
+			<select class="select-input" name="c_select_marie" id="c_select_marie">
+			</select>
+			<br>
+		</div>
+		<div id="c_marie"></div>
+	</ons-card>
+
+	<script>
+		Initialisation_parametres();
+Initialisation_evenements('complies');
+	</script>
+
+</ons-page>

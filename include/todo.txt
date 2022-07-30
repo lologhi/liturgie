@@ -1,0 +1,30 @@
+Correction temps pascal :
+OK I -> III inclus
+
+Sélection des hymnes :
+Mettre l'information dans les variables de session
+C'est la fonction Charge_tout qui doit se charger de l'affichage ou non
+de la sélection (permet de gérer plus simplement le cas des fêtes de saints
+pendant les temps spécifiques).
+
+Gérer le milieu du jour avec le psaume graduel
+(différents pour Tierce, Sexte et None)
+
+Reprendre la semaine de Pâques n°2 et 3 - le sanctoral d'avril et début mai.
+
+Destruction du choix des hymnes pour le 25 mars
+
+Milieu du jour : supprimer les fichiers pour chaque jour dans le temps pascal :
+- c'est le même capitule chaque lundi / mardi ...
+- même répons tous les jours (déjà fait)
+- même antienne également.
+
+Solennités et fêtes mobiles :
+-> Saisir les textes du Coeur Immaculé de Marie
+-> Mémoire Sainte Marie Mère de l'Église
+
+Pour Marie, ajouter dans les hymnes, l'Ave Maris Stella.
+
+Sanctoral 
+7 avril (S. JB de la Salle)
+Mai

@@ -1,0 +1,32 @@
+<script>
+	var path = 'sanctoral/03/07-';
+	var path_commun = 'sanctoral/martyrs/';
+	var commun = ['m_capitule1',
+		'm_repons1',
+		'm_capitule2',
+		'm_repons2',
+		'm_capitule3',
+		'm_repons3'
+	];
+	var commun2 = ['m_capitule1',
+		'm_repons1_4',
+		'm_capitule2_4',
+		'm_repons2_4',
+		'm_capitule3',
+		'm_repons3_4'
+	];
+	var propre = [];
+
+	sessionStorage.setItem('m_titre_sanctoral', path+'titre_afriquen.html');
+
+	for (var i=0; i < propre.length; i++) {
+		sessionStorage.setItem(propre[i], path+propre[i]+'.html');
+	}
+	for (var i=0; i < commun.length; i++) {
+		sessionStorage.setItem(commun[i], path_commun+commun2[i]+'.html');
+	}
+
+	sessionStorage.setItem('m_oraison1', path+'oraison.html');
+	sessionStorage.setItem('m_oraison2', path+'oraison.html');
+	sessionStorage.setItem('m_oraison3', path+'oraison.html');
+</script>

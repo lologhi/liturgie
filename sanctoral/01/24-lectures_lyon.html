@@ -1,0 +1,12 @@
+<script>
+	var path = 'sanctoral/01/24-';
+	var propre = ['l_patristique'];
+
+	sessionStorage.setItem('l_titre_sanctoral', path+'titre_lyon.html');
+
+	for (var i=0; i < propre.length; i++) {
+		sessionStorage.setItem(propre[i], path+propre[i]+'_lyon.html');
+	}
+
+	sessionStorage.setItem('l_oraison', path+'oraison.html');
+</script>

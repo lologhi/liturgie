@@ -1,0 +1,32 @@
+<script>
+var path_propre = 'sanctoral/01/03-';
+var path_commun= 'sanctoral/vierges/';
+var commun = [
+	'l_antienne_1',
+	'l_antienne_2',
+	'l_antienne_3',
+	'l_verset'
+]
+var propre = [
+	'l_hymne',
+	'l_lecture',
+	'l_patristique'
+];
+
+sessionStorage.setItem('l_titre_sanctoral', path_propre+'titre_paris.html');
+
+sessionStorage.setItem('l_psaume_1', '18A');
+sessionStorage.setItem('l_psaume_2', '44-I');
+sessionStorage.setItem('l_psaume_3', '44-II');
+
+for (var i=0; i < commun.length; i++) {
+	sessionStorage.setItem(commun[i], path_commun+commun[i]+'.html');
+}
+
+for (var i=0; i < propre.length; i++) {
+	sessionStorage.setItem(propre[i], path_propre+propre[i]+'.html');
+}
+sessionStorage.setItem('l_patristique', path_propre+'l_patristique_paris.html');
+
+sessionStorage.setItem('l_oraison', path_propre+'oraison.html');
+</script>

@@ -1,0 +1,43 @@
+<script>
+var path_commun = 'sanctoral/'+localStorage.getItem('commun')+'/';
+var commun_label = ['hymne',
+		'antienne_1',
+		'antienne_2',
+		'antienne_3',
+		'lecture_1',
+		'repons_1',
+		'antienne_ev',
+		'intercession',
+		'oraison'
+];
+var commun = ['v_hymne',
+		'v_antienne_1',
+		'v_antienne_2',
+		'v_antienne_cantique',
+		'v_capitule',
+		'v_repons',
+		'v_antienne_ev',
+		'v_intercession',
+		'oraison'
+];
+
+$('#bloc_psaume_inv').hide();
+$('#lecture_1_titre').show();
+$('#lecture_2_titre').hide();
+$('#lecture_3_titre').hide();
+$('#titre_intercession').show();
+$('#pater').show();
+
+$('#titre_commun_office').html("<h3><i>VÊPRES</i></h3>");
+$('#lecture_1_titre').html('Parole de Dieu');
+$('#titre_cantique_ev').html('<h2 class="cantique"><span class="rouge"><b>Cantique de Marie</b> (Lc 1)</span></h2><p class="ref"><b>NT 1</b></p>');
+
+$('#titre_psaume_1').load(path_commun+'vepres.html');
+$('#cantique_ev').load('cantiques/NT1.html');
+
+for (var i=0; i < commun.length; i++) {
+	Charge_fichier('#'+commun_label[i], path_commun+commun[i]+'.html');
+	//	$('#'+commun_label[i]).load(path_commun+commun[i]+'.html');
+}
+
+</script>

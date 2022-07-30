@@ -1,0 +1,27 @@
+<script>
+	var path = 'sanctoral/11/CR-';
+	var propre = ['m_antienne_1',
+		'm_antienne_2',
+		'm_antienne_3',
+		'm_capitule1',
+		'm_repons1',
+		'm_capitule2',
+		'm_repons2',
+		'm_capitule3',
+		'm_repons3'
+	];
+
+	sessionStorage.setItem('m_titre_sanctoral', path+'titre.html');
+
+		sessionStorage.setItem('m_psaume_1', '117-I');
+		sessionStorage.setItem('m_psaume_2', '117-II');
+		sessionStorage.setItem('m_psaume_3', '117-III');
+
+	for (var i=0; i < propre.length; i++) {
+		sessionStorage.setItem(propre[i], path+propre[i]+'.html');
+	}
+
+	sessionStorage.setItem('m_oraison1', path+'oraison.html');
+	sessionStorage.setItem('m_oraison2', path+'oraison.html');
+	sessionStorage.setItem('m_oraison3', path+'oraison.html');
+</script>

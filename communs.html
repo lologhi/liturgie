@@ -1,0 +1,124 @@
+<ons-page id='communs'>
+	<ons-toolbar class='barre-menu'>
+		<div class="left">
+			<ons-toolbar-button onclick="Charge_page('accueil.html')">
+				<ons-icon icon="md-home"></ons-icon>
+			</ons-toolbar-button>
+		</div>
+		<div class="center">
+			Communs
+		</div>
+	</ons-toolbar>
+
+	<ons-fab position="bottom right" modifier="mini" onclick="Plein_ecran();">
+		<ons-icon id='plein-ecran' icon="md-fullscreen">
+		</ons-icon>
+	</ons-fab>
+	<ons-card class="cadre">
+		<div id="select_commun_div">
+			<select class="select-input" name="select-commun" id="select-commun">
+				<option value="dedicace" selected="selected">Dédicace</option>
+				<option value="marie">Marie</option>
+				<option value="apotres">Apôtres</option>
+				<option value="martyrs">Plrs. martyrs</option>
+				<option value="martyr">Un martyr</option>
+				<option value="pasteurs">Pasteurs</option>
+				<option value="docteurs1">Docteurs-pasteurs</option>
+				<option value="docteurs2">Docteurs-saints</option>
+				<option value="docteurs3">Docteurs-vierges</option>
+				<option value="docteurs4">Docteurs-saintes</option>
+				<option value="vierges">Vierges</option>
+				<option value="saints">Saints</option>
+				<option value="saintes">Saintes</option>
+				<option value="religieux">Religieux</option>
+				<option value="religieuses">Religieuses</option>
+				<option value="caritatifm">Act. caritative (M)</option>
+				<option value="caritatiff">Act. caritative (F)</option>
+				<option value="educateur">Éducateur</option>
+				<option value="defunts">Défunts</option>
+			</select>
+		</div>
+
+		<div id="select_office_div">
+			<select class="select-input" name="select-office" id="select-office">
+				<option value="vepres0" selected="selected">Veille au soir</option>
+				<option value="lectures">Lectures</option>
+				<option value="laudes">Laudes</option>
+				<option value="milieu">Milieu du jour</option>
+				<option value="vepres">Vêpres</option>
+			</select>
+		</div>
+
+		<div id="titre_commun" class="center"></div>
+		<div id="titre_commun_office" class="center"></div>
+
+		<div id="bloc_psaume_inv">
+			<h2>PSAUME INVITATOIRE</h2>
+			<select class="select-input" name="select_inv" id="select_inv">
+				<option value="94">Psaume 94</option>
+				<option value="66">Psaume 66</option>
+				<option value="99">Psaume 99</option>
+				<option value="23">Psaume 23</option>
+			</select>
+			<br>
+			<div id="antienne_inv"></div>
+			<div id="psaume_inv"></div>
+			<br>
+			<div id="antienne_invb"></div>
+		</div>
+
+		<h2 id="titre_hymne">Hymne</h2>
+		<div id="hymne"></div>
+
+		<h2>PSALMODIE</h2>
+		<div id="titre_psaume_1"></div>
+		<div id="antienne_1"></div>
+		<div id="psaume_1"></div>
+		<br>
+		<div id="antienne_1b"></div>
+
+		<div id="titre_psaume_2"></div>
+		<div id="antienne_2"></div>
+		<div id="psaume_2"></div>
+		<br>
+		<div id="antienne_2b"></div>
+
+		<div id="titre_psaume_3"></div>
+		<div id="antienne_3"></div>
+		<div id="psaume_3"></div>
+		<br>
+		<div id="antienne_3b"></div>
+
+		<div id="verset"></div>
+
+		<h2 id="lecture_1_titre"></h2>
+		<div id="lecture_1"></div>
+		<div id="repons_1"></div>
+		<h2 id="lecture_2_titre"></h2>
+		<div id="lecture_2"></div>
+		<div id="repons_2"></div>
+		<h2 id="lecture_3_titre"></h2>
+		<div id="lecture_3"></div>
+		<div id="repons_3"></div>
+
+		<div id="titre_cantique_ev"></div>
+		<div id="antienne_ev"></div>
+		<div id="cantique_ev"></div>
+		<br>
+		<div id="antienne_evb"></div>
+
+		<h2 id="titre_intercession">Intercession</h2>
+		<div id="intercession"></div>
+
+		<h2 id="pater">Notre Père</h2>
+		<div id="tedeum"></div>
+
+		<h2 id="titre_oraison">Prière</h2>
+		<div id="oraison"></div>
+
+	</ons-card>
+	<script>
+Communs();
+	</script>
+
+</ons-page>

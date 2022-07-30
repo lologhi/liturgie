@@ -1,0 +1,23 @@
+<script>
+var path_propre = 'sanctoral/12/N31-';
+
+var propre = ['l_antienne_1',
+		'l_antienne_2',
+		'l_antienne_3',
+		'l_verset',
+		'l_lecture',
+		'l_patristique'
+];
+
+sessionStorage.setItem('l_titre_sanctoral', path_propre+'titre.html');
+
+sessionStorage.setItem('l_psaume_1', '95');
+sessionStorage.setItem('l_psaume_2', '96');
+sessionStorage.setItem('l_psaume_3', '97');
+
+for (var i=0; i < propre.length; i++) {
+	sessionStorage.setItem(propre[i], path_propre+propre[i]+'.html');
+}
+
+sessionStorage.setItem('l_oraison', path_propre+'oraison.html');
+</script>

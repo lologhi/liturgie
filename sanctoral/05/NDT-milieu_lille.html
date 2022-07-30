@@ -1,0 +1,24 @@
+<script>
+	var path = 'sanctoral/05/NDT-';
+var path_commun = 'sanctoral/marie/';
+var commun = ['m_antienne_1',
+	'm_antienne_2',
+	'm_antienne_3',
+	'm_capitule1',
+	'm_repons1',
+	'm_capitule2',
+	'm_repons2',
+	'm_capitule3',
+	'm_repons3'
+];
+
+sessionStorage.setItem('m_titre_sanctoral', path+'titre_lille.html');
+
+for (var i=0; i < commun.length; i++) {
+	sessionStorage.setItem(commun[i], path_commun+commun[i]+'_lille.html');
+}
+
+sessionStorage.setItem('m_oraison1', path+'oraison_lille.html');
+sessionStorage.setItem('m_oraison2', path+'oraison_lille.html');
+sessionStorage.setItem('m_oraison3', path+'oraison_lille.html');
+</script>

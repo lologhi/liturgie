@@ -1,0 +1,16 @@
+<script>
+var path_propre = 'sanctoral/paques/O0-';
+var propre = ['la_hymne',
+		'la_antienne_inv'
+];
+
+sessionStorage.setItem('la_titre_sanctoral', path_propre+'titre.html');
+sessionStorage.setItem('la_titre_secondaire', '');
+
+$('#la_select-hymne-div').hide();
+
+for (var i=0; i < propre.length; i++) {
+	sessionStorage.setItem(propre[i], path_propre+propre[i]+'.html');
+}
+
+</script>

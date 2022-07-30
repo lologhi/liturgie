@@ -1,0 +1,22 @@
+<script>
+	var path = 'sanctoral/08/29-'
+	var propre = ['la_antienne_1',
+		'la_antienne_cantique',
+		'la_antienne_2',
+		'la_capitule',
+		'la_repons',
+		'la_antienne_ev'
+	];
+
+	sessionStorage.setItem('la_titre_sanctoral', path+'titre.html');
+
+		sessionStorage.setItem('la_psaume_1', '62');
+		sessionStorage.setItem('la_cantique', '41');
+		sessionStorage.setItem('la_psaume_2', '149');
+
+	for (var i=0; i < propre.length; i++) {
+		sessionStorage.setItem(propre[i], path+propre[i]+'.html');
+	}
+
+	sessionStorage.setItem('la_oraison', path+'oraison.html');
+</script>

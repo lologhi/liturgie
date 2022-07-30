@@ -1,0 +1,184 @@
+@font-face {
+	font-family: "Liturgie";
+	src: url('liturgy.ttf');
+}
+
+*:not(input):not(textarea):not(select) {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+#detect-area {
+	background-color: #FF0000!important;
+}
+
+body {
+	margin:0;
+	padding: 0px;
+	width: auto;
+	font-family: serif!important;
+}
+
+div.page__background {
+	background: #000000;
+	background-repeat:repeat-y;
+	background-position:center center;
+	background-attachment:scroll;
+	background-size:100% 100%;
+	top:0!important;
+	padding-top:0!important;
+}
+
+div.page__content {
+	font-family: serif!important;
+}
+
+.card {
+	padding-bottom: 3.2em!important;
+}
+
+/* pour centrer le calendrier */
+div.picker__holder {
+	margin: auto;
+}
+
+.barre-menu .select-input {
+	color: #FFFFFF!important;
+}
+
+.tabbar, .tabbar__button, .tabbar__label {
+	height: 35px;
+}
+.tabbar__button, .tabbar__label {
+	line-height: 35px!important;
+	font-size: 0.9em!important;
+	text-transform:none!important;
+}
+.tabbar__content {
+	top: 35px;
+}
+
+.cadre {
+	width:480px;
+	margin: 0 auto;
+	font-family: serif!important;
+	padding: 4px;
+}
+
+@media screen and (max-width: 480px) {
+	.cadre {
+		width:100%;
+		margin: 0 auto;
+	}
+}
+
+.bouton_date {
+	font-size: 0.9em;
+}
+
+.bouton_menu_g {
+	font-size: 1em;
+}
+
+.switch-latin {
+	text-align:right;
+	font-size: 0.8em!important;
+	font-style:italic!important;
+}
+
+.slider {
+	width:95%;
+	padding-left: 2.5%;
+}
+
+.nombre {
+	width: 3.5em;
+}
+
+h1, h2, h3 {
+	font-family:serif!important;
+}
+
+h1 {
+	font-size:1.1em!important;
+}
+
+h2 {
+	color:#880000;
+	text-transform:uppercase;
+	font-size:1em!important;
+	margin-top:2em!important;
+	font-weight:bold!important;
+}
+
+h2.cantique {
+	color:#EEDDDD;
+	text-transform:none;
+	font-weight:normal!important;
+	margin-bottom:0.6em!important;
+}
+
+h3 {
+	font-size: 1em!important;
+	font-weight: normal;
+}
+
+p {
+	text-align : justify;
+}
+
+.antienne {
+	font-size:0.9em;
+}
+
+p.ref {
+	font-size:0.9em;
+	text-align : right;
+	margin-top : 0em;
+}
+
+span.verset, .rouge {
+	color:#880000;
+}
+
+span.verset {
+	font-size:0.6em;
+	vertical-align:text-top;
+}
+
+.espace {
+	margin-left: 2em;
+}
+
+.center, .center p {
+	text-align: center;
+}
+
+.center p.antienne {
+	text-align: justify;
+}
+
+.droite {
+	text-align: right;
+}
+
+.espace-dessous {
+	margin-bottom:0.5em;
+}
+
+span.petit {
+	font-size:0.6em;
+}
+
+span.liturgie {
+	font-family: Liturgie;
+	font-weight: bold;
+	margin-right: 0.3em;
+}
+
+span.liturgie2 {
+	font-family: Liturgie;
+	font-size: 0.9em;
+}

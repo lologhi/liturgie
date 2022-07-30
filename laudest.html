@@ -1,0 +1,35 @@
+<ons-page id='laudes'>
+	<ons-toolbar class='barre-menu'>
+		<div class="left bouton_menu_g" onclick="Ouvre_menu_g()">
+			<ons-icon icon="md-menu"></ons-icon>&nbsp;&nbsp;Laudes
+		</div>
+		<div class="center">
+			<div id="la_date" class="bouton_date"></div>
+		</div>
+		<div class="right">
+			<ons-toolbar-button onclick="Ouvre_menu()">
+				<ons-icon icon="md-settings"></ons-icon>
+			</ons-toolbar-button>
+		</div>
+	</ons-toolbar>
+
+	<ons-tabbar id="la_tabbar" swipeable position="top">
+		<ons-tab page="la_t1.html" label="Intro" active>
+		</ons-tab>
+		<ons-tab page="la_t2.html" label="Hymne">
+		</ons-tab>
+		<ons-tab page="la_t3.html" label="Psalmodie">
+		</ons-tab>
+		<ons-tab page="la_t4.html" label="Capitule">
+		</ons-tab>
+		<ons-tab page="la_t5.html" label="Intercession">
+		</ons-tab>
+	</ons-tabbar>
+	<ons-modal id='la_modal'>
+		<input type="text" id="la_calendrier" class="datepicker" name="la_calendrier" hidden="hidden"/>
+	</ons-modal>
+	<ons-fab position="bottom right" modifier="mini" onclick="Plein_ecran();">
+		<ons-icon id='plein-ecran' icon="md-fullscreen">
+		</ons-icon>
+	</ons-fab>
+</ons-page>

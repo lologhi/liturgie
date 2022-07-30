@@ -1,0 +1,20 @@
+<script>
+var path_propre = 'sanctoral/careme/S6-';
+
+var propre = ['la_hymne',
+	'la_antienne_inv'];
+
+sessionStorage.setItem('la_titre_sanctoral', path_propre+'titre.html');
+sessionStorage.setItem('la_titre_secondaire', '');
+
+$('#la_select-hymne-div').hide();
+
+sessionStorage.setItem('la_psaume_1', '63');
+sessionStorage.setItem('la_cantique', '23');
+sessionStorage.setItem('la_psaume_2', '150');
+
+for (var i=0; i < propre.length; i++) {
+	sessionStorage.setItem(propre[i], path_propre+propre[i]+'.html');
+}
+
+</script>

@@ -1,0 +1,43 @@
+Architecture de l'application
+
+Liturgie des heures est une application à page unique : index.html.
+Les fonctions javascript et feuilles de style sont dans le répertoire include.
+
+On place un listener sur le formulaire contenant la date demandée. Un changement date déclanche la fonction Remplir_office(office)
+
+    La fonction Date_choisie permet de récupérer cette date. Si aucune date n'a été demandée, cette fonction entre la date du jour.
+
+À chaque chargement de page, on insère Date_choisie dans le formulaire, ce qui déclanche le chargement de la page.
+
+Remplir_office (office)
+    Rôle : fonction principale qui détermine les données à afficher et les affiche.
+    -> récupération des données nécessaire à la composition de l'office
+        - lh-calendrier.js/Temps_liturgique -> Année (A/B/C), temps liturgique, semaine, jour et préséance
+        - lh-calendrier.js/Sanctoral -> préseance du sanctoral (tient compte des fêtes mobiles comme l'IC et des propres régionaux)
+        - Fichier_sanctoral -> récupère le nom du fichier du Sanctoral si celui-ci devait être affiché. On enregistre cette valeur dans une variable de session
+        (attention, on ne tient pour le moment pas compte d'éventuelles premières vepres).
+    -> En fonction de l'office demandé, on lance la fonction Formulaire_'office'(). Cette fonction détermine les données du temporal  pour le formulaire et indique si le sanctoral doit être activé.
+    -> on termine avec la fonction Termine_office - sauf pour les complies pour lesquelles on lance directement la fonction Charge_tout (car il n'y a pas de sanctoral, seule la préséance est utilisée).
+
+Formulaire_'office'(temps, semaine, jour, annee, date_jour, mois, jour_du_mois, preseance, preseance_sanctoral)
+    Rôle : déterminer les données du temporal pour le formulaire et a pour résultat un booléen qui indique si le sanctoral doit être activé (affiche_sanctoral)
+    -> On utilise la fonction Psaumes pour récupérer la liste des 3 psaumes/cant. de l'office du jour.
+    -> les données du formulaire sont enregistrés dans les variables de session. Les variables de session on pour nom l'id des <div> à remplir et pour valeur, le chemin d'accès au fichier qui contient ce qui doit être inséré dans les <div>.
+    -> Pour les vêpres, il faut aussi déterminer la présence de premières vêpres (2 cas : samedi ou veille de solennité, il faut aussi distinguer s'il s'agit de premières vêpres du sanctoral ou non, cf. notamment les fêtes du Seigneur quand elle tombe un dimanche). Dans un tel cas, ce sont les valeurs du lendemain qui compte pour la détermination du temps liturgique et du sanctoral.
+    -> on renvoie à la fin la valeur de la variable de affiche_sanctoral.
+    
+    -> Cas particuliers : Féries de l'Avent, Octave de Noël, Octave de Pâques, l'Ascension et la Pentecôte.
+    Pour cela, on utilise une variable de session supplémentaire : 'prefixe'_temporal -> qui indique un fichier à charger en plus
+    Ces fichiers 'temporal' fonctionne comme ceux du sanctoral et permettre de sur-imposer des données aux données par défaut du temporal.
+
+Termine_office(office, affiche_sanctoral)
+    Rôle : Terminer la modification des variables de session en intégrant les éventuels fichiers 'temporal' et le fichier du sanctoral si on l'affiche
+    Cette fonction permet de gérer le chargement asynchrone des fichiers du temporal et du sanctoral, elle attend le chargement de ces fichiers avant de lancer la fonction Charge_tout()
+
+Charge_tout (office)
+    -> Cette fonction parcourt simplement le tableau Labels_office(office) et charge les informations à partir des noms de fichier présents dans les variables de session
+    
+Gestion de l'affichage des communs pour les laudes et les vêpres quand on célèbre une mémoire
+    ->
+    
+Gestion des propres régionaux

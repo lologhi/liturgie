@@ -1,0 +1,18 @@
+<script>
+	var path_propre = 'sanctoral/paques/P-';
+	var propre = ['la_antienne_inv',
+		'la_hymne'
+	];
+
+	sessionStorage.setItem('la_titre_sanctoral', path_propre+'titre.html');
+	sessionStorage.setItem('la_titre_secondaire', '');
+	$('#la_select-hymne-div').hide();
+
+		sessionStorage.setItem('la_psaume_1', '62');
+		sessionStorage.setItem('la_cantique', '41');
+		sessionStorage.setItem('la_psaume_2', '149');
+
+	for (var i=0; i < propre.length; i++) {
+		sessionStorage.setItem(propre[i], path_propre+propre[i]+'.html');
+	}
+</script>

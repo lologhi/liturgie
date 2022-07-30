@@ -1,0 +1,30 @@
+<script>
+var path = 'sanctoral/01/03-';
+var propre = ['m_antienne_1',
+		'm_antienne_2',
+		'm_antienne_3',
+		'm_capitule1',
+		'm_repons1',
+		'm_capitule2',
+		'm_repons2',
+		'm_capitule3',
+		'm_repons3'
+];
+
+sessionStorage.setItem('m_titre_sanctoral', path+'titre_paris.html');
+
+
+psaumes =['120', '122', '124'];
+
+for (var i=0; i<3; i++) {
+	sessionStorage.setItem('m_psaume_'+(i+1), ''+psaumes[i]+'');
+}
+
+for (var i=0; i < propre.length; i++) {
+	sessionStorage.setItem(propre[i], path+propre[i]+'.html');
+}
+
+sessionStorage.setItem('m_oraison1', path+'oraison.html');
+sessionStorage.setItem('m_oraison2', path+'oraison.html');
+sessionStorage.setItem('m_oraison3', path+'oraison.html');
+</script>

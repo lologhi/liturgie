@@ -1,0 +1,40 @@
+<ons-page id='psaumes'>
+	<ons-toolbar class='barre-menu'>
+		<div class="left">
+			<ons-toolbar-button onclick="Charge_page('accueil.html')">
+				<ons-icon icon="md-home"></ons-icon>
+			</ons-toolbar-button>
+		</div>
+		<div class="center">
+			Psaumes et Cantiques	
+		</div>
+	</ons-toolbar>
+
+	<ons-fab position="bottom right" modifier="mini" onclick="Plein_ecran();">
+		<ons-icon id='plein-ecran' icon="md-fullscreen">
+		</ons-icon>
+	</ons-fab>
+	<ons-card class="cadre">
+		<div id="select_psaume_cantique" class="center">
+			<select class="select-input" name="select-categorie" id="select-categorie">
+				<option value="PS" selected="selected">Psaume</option>
+				<option value="AT">Cant. AT</option>
+				<option value="NT">Cant. NT</option>
+			</select> &nbsp;
+			<input class="nombre" name="nombre" id="nombre" min="1" max="150" value="1" type="number">
+		</div>
+
+		<br>
+		<div id='ps_slider' class="center slider"></div>
+
+		<div id="ps_titre_principal" class="center"></div>
+		<br>
+		<div id="ps_psaume"></div>
+		<p class="center">~</p>
+
+	</ons-card>
+	<script>
+Psaume_et_cantique();
+	</script>
+
+</ons-page>

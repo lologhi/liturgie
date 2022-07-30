@@ -1,0 +1,37 @@
+<script>
+var path_commun = 'sanctoral/'+localStorage.getItem('commun')+'/';
+var commun_label = ['hymne',
+	'antienne_1',
+	'antienne_2',
+	'antienne_3',
+	'verset',
+	'lecture_1',
+	'lecture_2',
+	'oraison'
+];
+var commun = ['l_hymne',
+	'l_antienne_1',
+	'l_antienne_2',
+	'l_antienne_3',
+	'l_verset',
+	'l_lecture',
+	'l_patristique',
+	'oraison'
+];
+
+$('#bloc_psaume_inv').hide();
+$('#lecture_1_titre').hide();
+$('#lecture_2_titre').hide();
+$('#lecture_3_titre').hide();
+$('#titre_intercession').hide();
+$('#pater').hide();
+
+$('#titre_commun_office').html("<h3><i>LECTURES</i></h3>");
+$('#tedeum').load('lectures/tedeum.html');
+$('#titre_psaume_1').load(path_commun+'lectures.html');
+
+for (var i=0; i < commun.length; i++) {
+	Charge_fichier('#'+commun_label[i], path_commun+commun[i]+'.html');
+}
+
+</script>

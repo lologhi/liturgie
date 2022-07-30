@@ -1,0 +1,29 @@
+<script>
+var path_propre = 'sanctoral/10/24-';
+
+var path_commun = 'sanctoral/dedicace/';
+var propre = [];
+var commun = ['l_hymne',
+		'l_antienne_1',
+		'l_antienne_2',
+		'l_antienne_3',
+		'l_verset',
+		'l_lecture',
+		'l_patristique'
+];
+
+sessionStorage.setItem('l_titre_sanctoral', path_propre+'titre_lyon.html');
+
+sessionStorage.setItem('l_psaume_1', '23');
+sessionStorage.setItem('l_psaume_2', '83');
+sessionStorage.setItem('l_psaume_3', '86');
+
+for (var i=0; i < propre.length; i++) {
+	sessionStorage.setItem(propre[i], path_propre+propre[i]+'_lyon.html');
+}
+for (var i=0; i < commun.length; i++) {
+	sessionStorage.setItem(commun[i], path_commun+commun[i]+'.html');
+}
+
+sessionStorage.setItem('l_oraison', path_commun+'oraison.html');
+</script>

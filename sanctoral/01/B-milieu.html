@@ -1,0 +1,36 @@
+<script>
+var path = 'sanctoral/01/B-';
+var propre = ['m_antienne_1',
+		'm_antienne_2',
+		'm_antienne_3',
+		'm_capitule1',
+		'm_repons1',
+		'm_capitule2',
+		'm_repons2',
+		'm_capitule3',
+		'm_repons3'
+];
+
+sessionStorage.setItem('m_titre_sanctoral', path+'titre.html');
+
+var date_c = Date_choisie();
+if (date_c.getDate()==8) {
+	psaumes =['118-6','39-I','39-II'];
+} else if (date_c.getDate()==9) {
+	psaumes =['118-12','70-I','70-II'];
+} else {
+	psaumes =['117-I','117-II','117-III'];
+}
+
+for (var i=0; i<3; i++) {
+	sessionStorage.setItem('m_psaume_'+(i+1), ''+psaumes[i]+'');
+}
+
+for (var i=0; i < propre.length; i++) {
+	sessionStorage.setItem(propre[i], path+propre[i]+'.html');
+}
+
+sessionStorage.setItem('m_oraison1', path+'oraison.html');
+sessionStorage.setItem('m_oraison2', path+'oraison.html');
+sessionStorage.setItem('m_oraison3', path+'oraison.html');
+</script>

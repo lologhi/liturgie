@@ -1,0 +1,26 @@
+<ons-page id=’prieres-marie’>
+	<ons-toolbar class=’barre-menu’>
+		<div class="left bouton_menu_g" onclick="Ouvre_menu_g()">
+			<ons-icon icon="md-menu"></ons-icon>&nbsp;&nbsp;Prières
+		</div>
+		<div class="center">
+			Vierge Marie
+		</div>
+	</ons-toolbar>
+
+	<ons-card class="cadre">
+		<div id="pmarie_select_div">
+			<select class="select-input" name="pmarie_select" id="pmarie_select">
+			</select>
+		</div>
+		<div id="pmarie_texte"></div>
+
+		<p class="center">~<br><br>
+		<ons-button onclick="Charge_page('prieres.html')"><ons-icon icon="md-menu"></ons-icon></ons-button></p>
+	</ons-card>
+
+	<script>
+		Initialisation_parametres();
+Select_dynamique_init('#pmarie_select', 'prieres/marie_menu.html', '#pmarie_texte', 'prieres/', '.html');
+	</script>
+</ons-page>

@@ -1,0 +1,30 @@
+<script>
+var path_commun= 'sanctoral/martyr/';
+var path_propre = 'sanctoral/09/16-';
+var commun = ['v_hymne',
+	'v_antienne_1',
+	'v_antienne_2',
+	'v_antienne_cantique',
+	'v_capitule',
+	'v_repons',
+	'v_intercession'
+];
+var propre = ['v_antienne_ev'];
+
+sessionStorage.setItem('v_titre_sanctoral', path_propre+'titre_afriquen.html');
+sessionStorage.setItem('v_titre_secondaire', '');
+
+sessionStorage.setItem('v_psaume_1', '114');
+sessionStorage.setItem('v_psaume_2', '115');
+sessionStorage.setItem('v_cantique', '9');
+sessionStorage.setItem('v_antienne_ev2', '');
+
+for (var i=0; i < commun.length; i++) {
+	sessionStorage.setItem(commun[i], path_commun+commun[i]+'.html');
+}
+for (var i=0; i < propre.length; i++) {
+	sessionStorage.setItem(propre[i], path_propre+propre[i]+'.html');
+}
+
+sessionStorage.setItem('v_oraison', path_propre+'oraison_afriquen.html');
+</script>

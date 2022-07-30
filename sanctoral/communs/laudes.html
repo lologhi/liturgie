@@ -1,0 +1,51 @@
+<script>
+var path_commun = 'sanctoral/'+localStorage.getItem('commun')+'/';
+var commun_label = ['antienne_inv',
+		'hymne',
+		'antienne_1',
+		'antienne_2',
+		'antienne_3',
+		'lecture_1',
+		'repons_1',
+		'antienne_ev',
+		'intercession',
+		'oraison'
+];
+var commun = ['la_antienne_inv',
+		'la_hymne',
+		'la_antienne_1',
+		'la_antienne_cantique',
+		'la_antienne_2',
+		'la_capitule',
+		'la_repons',
+		'la_antienne_ev',
+		'la_intercession',
+		'oraison'
+];
+
+$('#bloc_psaume_inv').show();
+$('#lecture_1_titre').show();
+$('#lecture_2_titre').hide();
+$('#lecture_3_titre').hide();
+$('#titre_intercession').show();
+$('#pater').show();
+
+$('#psaume_inv94').load('psaumes/psaume94.html');
+$('#psaume_inv66').load('psaumes/psaume66.html');
+$('#psaume_inv99').load('psaumes/psaume99.html');
+$('#psaume_inv23').load('psaumes/psaume23.html');
+
+
+$('#titre_commun_office').html("<h3><i>LAUDES</i></h3>");
+$('#lecture_1_titre').html('Parole de Dieu');
+$('#titre_cantique_ev').html('<h2 class="cantique"><span class="rouge"><b>Cantique de Zacharie</b> (Lc 1)</span></h2><p class="ref"><b>NT 2</b></p>');
+
+$('#titre_psaume_1').load(path_commun+'laudes.html');
+$('#cantique_ev').load('cantiques/NT2.html');
+
+for (var i=0; i < commun.length; i++) {
+	Charge_fichier('#'+commun_label[i], path_commun+commun[i]+'.html');
+	//	$('#'+commun_label[i]).load(path_commun+commun[i]+'.html');
+}
+
+</script>

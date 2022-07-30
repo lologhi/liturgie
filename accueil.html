@@ -1,0 +1,80 @@
+<ons-page id='accueil'>
+	<ons-toolbar class="barre-menu">
+		<div class="center">
+			Liturgie
+		</div>
+	</ons-toolbar>
+	<br>
+
+	<ons-card class="cadre">
+
+		<ons-list>
+			<ons-list-header>Liturgie des heures</ons-list-header>
+			<ons-list-item onclick="Charge_page('lectures.html')" tappable>
+				<div class="left"><img class="list-item__thumbnail" src="include/images/lectures.png"></div>
+				<div class="center">Lectures</div>
+			</ons-list-item>
+		</ons-list-item>
+		<ons-list-item onclick="Charge_page('laudes.html')" tappable>
+			<div class="left"><img class="list-item__thumbnail" src="include/images/laudes.png"></div>
+			<div class="center">Laudes</div>
+		</ons-list-item>
+		<ons-list-item onclick="Charge_page('milieu.html')" tappable>
+			<div class="left"><img class="list-item__thumbnail" src="include/images/milieu.png"></div>
+			<div class="center">Milieu du jour</div>
+		</ons-list-item>
+		<ons-list-item onclick="Charge_page('vepres.html')" tappable>
+			<div class="left"><img class="list-item__thumbnail" src="include/images/vepres.png"></div>
+			<div class="center">Vêpres</div>
+		</ons-list-item>
+		<ons-list-item onclick="Charge_page('complies.html')" tappable>
+			<div class="left"><img class="list-item__thumbnail" src="include/images/complies.png"></div>
+			<div class="center">Complies</div>
+		</ons-list-item>
+		<ons-list-item onclick="Charge_page('communs.html')" tappable>
+			<div class="left"><img class="list-item__thumbnail" src="include/images/communs.png"></div>
+			<div class="center">Communs</div>
+		</ons-list-item>
+
+		<ons-list-header>Ressources</ons-list-header>
+		<ons-list-item onclick="Charge_page('psaumes.html')" tappable>
+			<div class="left"><img class="list-item__thumbnail" src="include/images/psaumes.png"></div>
+			<div class="center">Psaumes et cantiques</div>
+		</ons-list-item>
+		<ons-list-item onclick="Charge_page('prieres.html')" tappable>
+			<div class="left"><img class="list-item__thumbnail" src="include/images/prieres.png"></div>
+			<div class="center">Prières</div>
+		</ons-list-item>
+		<ons-list-item onclick="Charge_page('rituels.html')" tappable>
+			<div class="left"><img class="list-item__thumbnail" src="include/images/rituels.png"></div>
+			<div class="center">Rituels</div>
+		</ons-list-item>
+
+		<ons-list-header>Autres fonctions</ons-list-header>
+		<ons-list-item onclick="Charge_page('parametres.html')" tappable>
+			<div class="left"><img class="list-item__thumbnail" src="include/images/parametres.png"></div>
+			<div class="center">Paramètres</div>
+		</ons-list-item>
+		<ons-list-item onclick="Charge_page('nouveautes.html')" tappable>
+			<div class="left"><img class="list-item__thumbnail" src="include/images/nouveautes.png"></div>
+			<div class="center">Nouveautés</div>
+		</ons-list-item>
+		<ons-list-item onclick="Charge_page('apropos.html')" tappable>
+			<div class="left"><img class="list-item__thumbnail" src="include/images/apropos.png"></div>
+			<div class="center">À propos</div>
+		</ons-list-item>
+	</ons-list>
+
+	<script>
+		Initialisation_parametres();
+/*
+document.addEventListener('deviceready', this.onDeviceReady, false);
+function onDeviceReady() {
+	if (cordova.platformId == 'android') {
+		StatusBar.hide();
+	}
+};
+ */
+
+	</script>
+</ons-page>

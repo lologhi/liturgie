@@ -1,0 +1,29 @@
+<script>
+var path_propre = 'sanctoral/11/02-';
+var path_commun = 'sanctoral/defunts/';
+var commun = ['v_hymne',
+		'v_antienne_1',
+		'v_antienne_cantique',
+		'v_antienne_2',
+		'v_capitule',
+		'v_repons',
+		'v_antienne_ev',
+		'v_intercession'
+];
+
+sessionStorage.setItem('v_titre_sanctoral', path_propre+'titre.html');
+
+var date = Date_choisie();
+if (date.getDay() > 0) {
+
+	sessionStorage.setItem('v_psaume_1', '120');
+	sessionStorage.setItem('v_psaume_2', '129');
+	sessionStorage.setItem('v_cantique', '5');
+
+	for (var i=0; i < commun.length; i++) {
+		sessionStorage.setItem(commun[i], path_commun+commun[i]+'.html');
+	}
+
+	sessionStorage.setItem('v_oraison', path_propre+'oraison.html');
+}
+</script>

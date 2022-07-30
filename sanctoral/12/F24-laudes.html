@@ -1,0 +1,21 @@
+<script>
+	var path = 'sanctoral/12/F24-';
+	var propre = ['la_antienne_inv',
+		'la_antienne_1',
+		'la_antienne_cantique',
+		'la_antienne_2',
+		'la_capitule',
+		'la_repons',
+		'la_antienne_ev',
+		'la_intercession'
+	];
+
+	for (var i=0; i < propre.length; i++) {
+		sessionStorage.setItem(propre[i], path+propre[i]+'.html');
+	}
+
+	date = new Date(Date.parse(sessionStorage.getItem("date_c")));
+  if (date.getDay() >0) {
+		sessionStorage.setItem('la_oraison', path+'oraison.html');
+	}
+</script>

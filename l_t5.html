@@ -1,0 +1,23 @@
+<ons-page id="l_t5">
+	<ons-card class="cadre">
+		<div id="l_tedeum_div" hidden>
+			<h2 id="tedeum_titre">Te Deum</h2>
+			<div id="l_switch_div" class="droite espace-dessous">
+				<span class="switch-latin">Latin</span>
+				<ons-switch id='l_switch_latin'></ons-switch>
+			</div>
+			<div id="l_tedeum"></div>
+		</div>
+		<h2 id="l_titre_oraison">Prière</h2>
+		<div id="l_oraison"></div>
+		<div id="l_conclusion">
+			<h2>Acclamation</h2>
+			<p>Bénissons le Seigneur.<br>
+			Nous rendons grâce à Dieu.</p>
+		</div>
+		<p class="center"><ons-button onclick="Charge_page('accueil.html')"><ons-icon icon="md-home"></ons-icon></ons-button></p>
+	</ons-card>
+	<script>
+		Initialisation_evenements('lectures');
+	</script>
+</ons-page>

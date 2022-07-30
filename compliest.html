@@ -1,0 +1,33 @@
+<ons-page id='complies'>
+	<ons-toolbar class='barre-menu'>
+		<div class="left bouton_menu_g" onclick="Ouvre_menu_g()">
+			<ons-icon icon="md-menu"></ons-icon>&nbsp;&nbsp;Complies
+		</div>
+		<div class="center">
+			<div id="c_date" class="bouton_date"></div>
+		</div>
+		<div class="right">
+			<ons-toolbar-button onclick="Ouvre_menu()">
+				<ons-icon icon="md-settings"></ons-icon>
+			</ons-toolbar-button>
+		</div>
+	</ons-toolbar>
+
+	<ons-tabbar id="c_tabbar" swipeable position="top" >
+		<ons-tab page="c_t1.html" label="Intro" active>
+		</ons-tab>
+		<ons-tab page="c_t2.html" label="Psalmodie">
+		</ons-tab>
+		<ons-tab page="c_t3.html" label="Lecture">
+		</ons-tab>
+		<ons-tab page="c_t4.html" label="Oraison">
+		</ons-tab>
+	</ons-tabbar>
+	<ons-modal id='c_modal'>
+		<input type="text" id="c_calendrier" class="datepicker" name="c_calendrier" hidden="hidden"/>
+	</ons-modal>
+	<ons-fab position="bottom right" modifier="mini" onclick="Plein_ecran();">
+		<ons-icon id='plein-ecran' icon="md-fullscreen">
+		</ons-icon>
+	</ons-fab>
+</ons-page>

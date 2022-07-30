@@ -1,0 +1,26 @@
+<ons-page id=’prieres-dieu’>
+	<ons-toolbar class=’barre-menu’>
+		<div class="left bouton_menu_g" onclick="Ouvre_menu_g()">
+			<ons-icon icon="md-menu"></ons-icon>&nbsp;&nbsp;Prières
+		</div>
+		<div class="center">
+			À Dieu
+		</div>
+	</ons-toolbar>
+
+	<ons-card class="cadre">
+		<div id="pdieu_select_div">
+			<select class="select-input" name="pdieu_select" id="pdieu_select">
+			</select>
+		</div>
+		<div id="pdieu_texte"></div>
+		
+		<p class="center">~<br><br>
+		<ons-button onclick="Charge_page('prieres.html')"><ons-icon icon="md-menu"></ons-icon></ons-button></p>
+	</ons-card>
+
+	<script>
+		Initialisation_parametres();
+Select_dynamique_init('#pdieu_select', 'prieres/dieu_menu.html', '#pdieu_texte', 'prieres/', '.html');
+	</script>
+</ons-page>

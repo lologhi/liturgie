@@ -1,0 +1,30 @@
+<script>
+var path_propre = 'sanctoral/07/26-';
+var path_commun = 'sanctoral/saints/';
+var propre = ['v_hymne',
+		'v_capitule',
+		'v_repons',
+		'v_antienne_ev'
+];
+var commun = ['v_antienne_1',
+		'v_antienne_2',
+		'v_antienne_cantique',
+		'v_intercession'
+];
+
+sessionStorage.setItem('v_titre_sanctoral', path_propre+'titre_canada.html');
+sessionStorage.setItem('v_titre_secondaire', '');
+
+sessionStorage.setItem('v_psaume_1', '121');
+sessionStorage.setItem('v_psaume_2', '126');
+sessionStorage.setItem('v_cantique', '4');
+
+for (var i=0; i < propre.length; i++) {
+	sessionStorage.setItem(propre[i], path_propre+propre[i]+'.html');
+}
+for (var i=0; i < commun.length; i++) {
+	sessionStorage.setItem(commun[i], path_commun+commun[i]+'.html');
+}
+
+sessionStorage.setItem('v_oraison', path_propre+'oraison_canada.html');
+</script>

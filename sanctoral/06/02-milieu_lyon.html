@@ -1,0 +1,30 @@
+<script>
+var path_propre = 'sanctoral/06/02-';
+var propre = ['m_antienne_1',
+		'm_antienne_2',
+		'm_antienne_3',
+		'm_capitule1',
+		'm_repons1',
+		'm_capitule2',
+		'm_repons2',
+		'm_capitule3',
+		'm_repons3'
+];
+
+sessionStorage.setItem('m_titre_sanctoral', path_propre+'titre_lyon.html');
+
+/*
+sessionStorage.setItem('m_psaume_1', '119');
+sessionStorage.setItem('m_psaume_2', '120');
+sessionStorage.setItem('m_psaume_3', '121');
+*/
+
+for (var i=0; i < propre.length; i++) {
+	sessionStorage.setItem(propre[i], path_propre+Antienne_temps_pascal(propre[i]+'_lyon')+'.html');
+}
+
+sessionStorage.setItem('m_oraison1', path_propre+'oraison_lyon.html');
+sessionStorage.setItem('m_oraison2', path_propre+'oraison_lyon.html');
+sessionStorage.setItem('m_oraison3', path_propre+'oraison_lyon.html');
+
+</script>

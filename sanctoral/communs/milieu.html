@@ -1,0 +1,46 @@
+<script>
+var path_commun = 'sanctoral/'+localStorage.getItem('commun')+'/';
+var commun_label = ['hymne',
+	'antienne_1',
+	'antienne_2',
+	'antienne_3',
+	'lecture_1',
+	'repons_1',
+	'lecture_2',
+	'repons_2',
+	'lecture_3',
+	'repons_3',
+	'oraison'
+];
+var commun = ['m_hymne',
+	'm_antienne_1',
+	'm_antienne_2',
+	'm_antienne_3',
+	'm_capitule1',
+	'm_repons1',
+	'm_capitule2',
+	'm_repons2',
+	'm_capitule3',
+	'm_repons3',
+	'oraison'
+];
+
+$('#bloc_psaume_inv').hide();
+$('#lecture_1_titre').show();
+$('#lecture_2_titre').show();
+$('#lecture_3_titre').show();
+$('#titre_intercession').hide();
+$('#pater').hide();
+
+$('#titre_commun_office').html("<h3><i>MILIEU DU JOUR</i></h3>");
+$('#lecture_1_titre').html('Parole de Dieu (T)');
+$('#lecture_2_titre').html('Parole de Dieu (S)');
+$('#lecture_3_titre').html('Parole de Dieu (N)');
+
+$('#titre_psaume_1').load(path_commun+'milieu.html');
+for (var i=0; i < commun.length; i++) {
+	Charge_fichier('#'+commun_label[i], path_commun+commun[i]+'.html');
+//	$('#'+commun_label[i]).load(path_commun+commun[i]+'.html');
+}
+
+</script>

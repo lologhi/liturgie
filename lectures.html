@@ -1,0 +1,92 @@
+<ons-page id='lectures'>
+	<ons-toolbar class='barre-menu'>
+		<div class="left bouton_menu_g" onclick="Ouvre_menu_g()">
+			<ons-icon icon="md-menu"></ons-icon>&nbsp;&nbsp;Lectures
+		</div>
+		<div class="center">
+			<div id="l_date" class="bouton_date"></div>
+		</div>
+		<div class="right">
+			<ons-toolbar-button onclick="Ouvre_menu()">
+				<ons-icon icon="md-settings"></ons-icon>
+			</ons-toolbar-button>
+		</div>
+	</ons-toolbar>
+
+	<ons-modal id='l_modal'>
+		<input type="text" id="l_calendrier" class="datepicker" name="l_calendrier" hidden/>
+	</ons-modal>
+
+	<ons-fab position="bottom right" modifier="mini" onclick="Plein_ecran();">
+		<ons-icon id='plein-ecran' icon="md-fullscreen">
+		</ons-icon>
+	</ons-fab>
+	<ons-card class="cadre">
+		<div id="l_titre_principal" class="center"></div>
+		<div id="l_titre_sanctoral" class="center"></div>
+		<div id="l_titre_secondaire" class="center"></div>
+
+		<div id="l_temporal"></div>
+
+		<div id="l_sanctoral"></div>
+
+		<br/>
+		<div id="l_introduction"></div>
+
+		<h2 id="l_titre_hymne">Hymne</h2>
+		<div id="l_select-hymne-div" style="display:none">
+			<select class="select-input" name="l_select-hymne" id="l_select-hymne"></select>
+			<br><br>
+		</div>
+		<div id="l_hymne"></div>
+
+		<h2>PSALMODIE</h2>
+		<div id="l_titre_psaume_1"></div>
+		<div id="l_antienne_1"></div>
+		<div id="l_psaume_1"></div>
+		<br/>
+		<div id="l_antienne_1b"></div>
+
+		<div id="l_titre_psaume_2"></div>
+		<div id="l_antienne_2"></div>
+		<div id="l_psaume_2"></div>
+		<br/>
+		<div id="l_antienne_2b"></div>
+
+		<div id="l_titre_psaume_3"></div>
+		<div id="l_antienne_3"></div>
+		<div id="l_psaume_3"></div>
+		<br/>
+		<div id="l_antienne_3b"></div>
+
+		<br/>
+		<div id="l_verset"></div>
+
+		<div id="l_lecture"></div>
+
+		<div id="l_patristique"></div>
+
+		<div id="l_tedeum_div" hidden>
+			<h2 id="tedeum_titre">Te Deum</h2>
+			<div id="l_switch_div" class="droite espace-dessous">
+				<span class="switch-latin">Latin</span>
+				<ons-switch id='l_switch_latin'></ons-switch>
+			</div>
+			<div id="l_tedeum"></div>
+		</div>
+
+		<h2 id="l_titre_oraison">Prière</h2>
+		<div id="l_oraison"></div>
+		<div id="l_conclusion">
+			<h2>Acclamation</h2>
+			<p>Bénissons le Seigneur.<br>
+			Nous rendons grâce à Dieu.</p>
+		</div>
+		<p class="center"><ons-button onclick="Charge_page('accueil.html')"><ons-icon icon="md-home"></ons-icon></ons-button></p>
+
+	</ons-card>
+	<script>
+		Initialisation_parametres();
+Initialisation_evenements('lectures');
+	</script>
+</ons-page>

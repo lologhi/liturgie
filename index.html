@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Application Web pour l'affiche de la liturgie des heures (bréviaire) en Français">
+		<title>Liturgie des heures</title>
+		<link rel="stylesheet" href="include/onsenui/onsenui.min.css">
+		<link id='css-onsen1' rel="stylesheet" href="include/onsenui/onsen-css-components.min.css">
+		<link id='css-onsen2' rel="stylesheet" href="include/onsenui/theme.css">
+		<link rel="stylesheet" href="include/pickadate/lh.css">
+		<link rel="stylesheet" href="include/pickadate/lh.date.css">
+		<link rel="stylesheet" href="include/slider/nouislider.min.css">
+		<link id='css-lh' rel="stylesheet" href="include/lh.css">
+		<link rel="icon" type="image/png" href="favicon.png" />
+		<script src="include/onsenui/onsenui.min.js"></script>
+		<script src="include/jquery-3.3.1.min.js"></script>
+		<script src="include/polyfill.min.js"></script>
+		<script src="include/pickadate/picker.js"></script>
+		<script src="include/pickadate/picker.date.js"></script>
+		<script src="include/pickadate/fr_FR.js"></script>
+		<script src="include/slider/nouislider.min.js"></script>
+		<script src="include/lh-psaumes.js"></script>
+		<script src="include/lh-calendrier.js"></script>
+		<script src="include/lh-ui.js"></script>
+		<script src="include/lh.js"></script>
+		<script src="cordova.js"></script>
+		<script src="cordova_plugins.js"></script>
+	</head>
+	<body>
+
+		<ons-splitter>
+			<ons-splitter-side id="menu-g" page="" side="left" width="200px" collapse swipeable>
+			</ons-splitter-side>
+			<ons-splitter-side id="menu" page="menu.html" side="right" width="200px" collapse swipeable>
+			</ons-splitter-side>
+			<ons-splitter-content id="content" page="accueil.html"></ons-splitter-content>
+		</ons-splitter>
+
+	</body>
+
+	<script>
+Initialisation_parametres()
+document.addEventListener('deviceready', this.onDeviceReady, false);
+
+function onDeviceReady() {
+
+	if (localStorage.getItem('ouverture') === "office") {
+		Charge_page_auto();
+	}
+
+	if (cordova.platformId == 'android') {
+		// pas nécessaire de cacher la barre de status, car l'application est plein écran (config cordova)
+		//		StatusBar.hide();
+
+		// demande la confirmation à la fermeture de l'application
+		ons.enableDeviceBackButtonHandler();
+		ons.setDefaultDeviceBackButtonListener(function(event) {
+		ons.notification.confirm('Confirmez la fermeture de l’application?')
+			.then(function(index) {
+				if (index === 1) { // Bouton OK
+					navigator.app.exitApp(); // Fermeture de l'appli
+				}
+			});
+	});
+	}
+}
+	</script>
+
+</html>

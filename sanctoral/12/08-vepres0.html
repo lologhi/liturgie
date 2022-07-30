@@ -1,0 +1,39 @@
+<script>
+var path_propre = 'sanctoral/12/08-';
+var path_commun = 'sanctoral/marie/';
+var commun0 = ['v0_hymne',
+		'v0_intercession'
+];
+var commun = ['v_hymne',
+		'v_intercession'
+];
+var propre0 = ['v0_antienne_1',
+		'v0_antienne_cantique',
+		'v0_antienne_2',
+		'v0_capitule',
+		'v0_repons',
+		'v0_antienne_ev'
+];
+var propre = ['v_antienne_1',
+		'v_antienne_cantique',
+		'v_antienne_2',
+		'v_capitule',
+		'v_repons',
+		'v_antienne_ev'
+];
+
+sessionStorage.setItem('v_titre_sanctoral', path_propre+'titre.html');
+
+sessionStorage.setItem('v_psaume_1', '112');
+sessionStorage.setItem('v_psaume_2', '147');
+sessionStorage.setItem('v_cantique', '4');
+
+for (var i=0; i < commun.length; i++) {
+	sessionStorage.setItem(commun[i], path_commun+commun0[i]+'.html');
+}
+for (var i=0; i < propre.length; i++) {
+	sessionStorage.setItem(propre[i], path_propre+propre0[i]+'.html');
+}
+
+sessionStorage.setItem('v_oraison', path_propre+'oraison.html');
+</script>

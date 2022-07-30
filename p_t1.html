@@ -1,0 +1,45 @@
+<ons-page id="p_t1">
+	<ons-card class="cadre">
+		<ons-list>
+			<ons-list-header>Affichage</ons-list-header>
+			<ons-list-item>
+				<div class="left">
+					Afficher à l'ouverture&nbsp;:&nbsp;&nbsp;
+					<select class="select-input" id="ouverture" name="ouverture" modifier='underbar'>
+						<option value="accueil">Page d’accueil</option>
+						<option value="office">Office courant</option>
+					</select>
+				</div>
+			</ons-list-item>
+			<ons-list-item>
+				<div class="left">
+					Taille des textes&nbsp;: 
+					<select class="select-input" id="taille-txt" name="taille-txt" modifier='underbar'>
+						<option value="90%">Très Petit</option>
+						<option value="100%">Petit</option>
+						<option value="110%">Moyen</option>
+						<option value="120%">Grand</option>
+						<option value="140%">Plus grand</option>
+						<option value="160%">Très grand</option>
+						<option value="200%">Énorme</option>
+					</select>
+				</div>
+			</ons-list-item>
+			<ons-list-item>
+				<div class="center">Affichage "onglets"	</div>
+				<div class="right"><ons-switch name="onglets" id="onglets"></ons-switch></div>
+			</ons-list-item>
+			<ons-list-item>
+				<div class="center">Mode nuit	</div>
+				<div class="right"><ons-switch name="mode_nuit" id="mode_nuit"></ons-switch></div>
+			</ons-list-item>
+			<ons-list-item>
+				<div class="center">Répéter les antiennes	</div>
+				<div class="right"><ons-switch name="repeter-ant" id="repeter-ant"></ons-switch></div>
+			</ons-list-item>
+		</ons-list>
+	</ons-card>
+	<script>
+		Validation_parametres();
+	</script>
+</ons-page>

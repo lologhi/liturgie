@@ -1,0 +1,28 @@
+<script>
+	var path = 'sanctoral/10/18-';
+	var path_commun = 'sanctoral/apotres/';
+	var propre = ['m_capitule1',
+		'm_repons1',
+		'm_capitule2',
+		'm_repons2',
+		'm_capitule3',
+		'm_repons3'
+	];
+	var commun = ['m_antienne_1',
+		'm_antienne_2',
+		'm_antienne_3'
+	];
+
+	sessionStorage.setItem('m_titre_sanctoral', path+'titre.html');
+
+	for (var i=0; i < propre.length; i++) {
+		sessionStorage.setItem(propre[i], path+propre[i]+'.html');
+	}
+	for (var i=0; i < commun.length; i++) {
+		sessionStorage.setItem(commun[i], path_commun+commun[i]+'.html');
+	}
+
+	sessionStorage.setItem('m_oraison1', path+'oraison.html');
+	sessionStorage.setItem('m_oraison2', path+'oraison.html');
+	sessionStorage.setItem('m_oraison3', path+'oraison.html');
+</script>

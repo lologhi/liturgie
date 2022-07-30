@@ -1,0 +1,21 @@
+<script>
+var path_propre = 'sanctoral/paques/A-';
+var propre = ['v_hymne',
+		'v_capitule',
+		'v_repons',
+		'v_intercession'
+];
+
+sessionStorage.setItem('v_titre_sanctoral', path_propre+'titre.html');
+sessionStorage.setItem('v_titre_secondaire', '');
+sessionStorage.setItem('v_premieres_vepres', '');
+$('#v_select-hymne-div').hide();
+
+sessionStorage.setItem('v_psaume_1', '109');
+sessionStorage.setItem('v_psaume_2', '46');
+sessionStorage.setItem('v_cantique', '10');
+
+for (var i=0; i < propre.length; i++) {
+	sessionStorage.setItem(propre[i], path_propre+propre[i]+'.html');
+}
+</script>

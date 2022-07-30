@@ -1,0 +1,12 @@
+<script>
+var path_propre = 'sanctoral/careme/S0-';
+var propre = ['l_hymne'];
+
+sessionStorage.setItem('l_titre_sanctoral', path_propre+'titre.html');
+$('#l_select-hymne-div').hide();
+
+for (var i=0; i < propre.length; i++) {
+	sessionStorage.setItem(propre[i], path_propre+propre[i]+'.html');
+}
+
+</script>

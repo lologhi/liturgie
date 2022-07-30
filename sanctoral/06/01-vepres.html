@@ -1,0 +1,12 @@
+<script>
+	var path = 'sanctoral/06/01-';
+var propre = ['v_antienne_ev'];
+
+sessionStorage.setItem('v_titre_sanctoral', path+'titre.html');
+
+for (var i=0; i < propre.length; i++) {
+	sessionStorage.setItem(propre[i], path+Antienne_temps_pascal(propre[i])+'.html');
+}
+
+sessionStorage.setItem('v_oraison', path+'oraison.html');
+</script>

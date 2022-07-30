@@ -1,0 +1,21 @@
+<script>
+	var path = 'sanctoral/12/F24-';
+	var propre = ['m_capitule1',
+		'm_repons1',
+		'm_capitule2',
+		'm_repons2',
+		'm_capitule3',
+		'm_repons3'
+	];
+
+	for (var i=0; i < propre.length; i++) {
+		sessionStorage.setItem(propre[i], path+propre[i]+'.html');
+	}
+
+	date = new Date(Date.parse(sessionStorage.getItem("date_c")));
+  if (date.getDay() >0) { // si le 24 tombe un dimanche, on garde l'oraison du dimanche
+		sessionStorage.setItem('m_oraison1', path+'oraison.html');
+		sessionStorage.setItem('m_oraison2', path+'oraison.html');
+		sessionStorage.setItem('m_oraison3', path+'oraison.html');
+	}
+</script>

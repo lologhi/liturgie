@@ -1,0 +1,136 @@
+<ons-page id='laudes'>
+	<ons-toolbar class='barre-menu'>
+		<div class="left bouton_menu_g" onclick="Ouvre_menu_g()">
+			<ons-icon icon="md-menu"></ons-icon>&nbsp;&nbsp;Laudes
+		</div>
+		<div class="center">
+			<div id="la_date" class="bouton_date"></div>
+		</div>
+		<div class="right">
+			<ons-toolbar-button onclick="Ouvre_menu()">
+				<ons-icon icon="md-settings"></ons-icon>
+			</ons-toolbar-button>
+		</div>
+	</ons-toolbar>
+
+	<ons-modal id='la_modal'>
+		<input type="text" id="la_calendrier" class="datepicker" name="la_calendrier" hidden/>
+	</ons-modal>
+
+	<ons-fab position="bottom right" modifier="mini" onclick="Plein_ecran();">
+		<ons-icon id='plein-ecran' icon="md-fullscreen">
+		</ons-icon>
+	</ons-fab>
+	<ons-card class="cadre">
+		<div id="la_titre_principal" class="center"></div>
+		<div id="la_titre_sanctoral" class="center"></div>
+		<div id="la_titre_secondaire" class="center"></div>
+
+		<div id="la_temporal"></div>
+
+		<div id="la_sanctoral"></div>
+
+		<div id="la_option-div" style="display:none">
+			<br><p class="antienne rouge">Choisir une option&nbsp;:</p>
+			<select class="select-input" name="la_option" id="la_option">
+			</select>
+			<br>
+		</div>
+
+		<br>
+		<div id="la_introduction"></div>
+
+		<h2 id="la_titre_invit">Invitatoire</h2>
+		<div id="la_antienne_inv"></div>
+
+		<div id="la_select-inv-div">
+			<select class="select-input" name="la_select_inv" id="la_select_inv">
+				<option value="94">Psaume 94</option>
+				<option value="66">Psaume 66</option>
+				<option value="99">Psaume 99</option>
+				<option value="23">Psaume 23</option>
+			</select>
+			<br><br>
+		</div>
+		<div id="la_psaume_inv"></div>
+
+		<div id="la_antienne_invb"></div>
+
+		<h2 id="la_titre_hymne">Hymne</h2>
+		<div id="la_select-hymne-div" style="display:none">
+			<select class="select-input" name="la_select-hymne" id="la_select-hymne"></select>
+			<br><br>
+		</div>
+		<div id="la_hymne"></div>
+
+
+		<h2>PSALMODIE</h2>
+		<div id="la_titre_psaume_1"></div>
+		<div id="la_antienne_1"></div>
+		<div id="la_psaume_1"></div>
+		<br>
+		<div id="la_antienne_1b"></div>
+
+		<div id="la_titre_cantique"></div>
+		<div id="la_antienne_cantique"></div>
+		<div id="la_cantique"></div>
+		<br>
+		<div id="la_antienne_cantiqueb"></div>
+
+		<div id="la_titre_psaume_2"></div>
+		<div id="la_antienne_2"></div>
+		<div id="la_psaume_2"></div>
+		<br>
+		<div id="la_antienne_2b"></div>
+
+		<h2 id="la_titre_capitule">Parole de Dieu</h2>
+		<div id="la_capitule"></div>
+		<div id="la_repons"></div>
+
+		<div id="la_titre_cantique_ev"></div>
+		<div id="la_antienne_ev"></div>
+		<div id="la_antienne_ev2"></div>
+
+		<div id="la_switch_div" class="droite espace-dessous">
+			<span class="switch-latin">Latin</span>
+			<ons-switch id='la_switch_latin'></ons-switch>
+		</div>
+
+		<div id="la_cantique_ev"></div>
+		<br>
+		<div id="la_antienne_evb"></div>
+		<div id="la_antienne_ev2b"></div>
+
+		<h2 id="la_titre_intercession">Louange et intercession</h2>
+		<div id="la_intercession"></div>
+
+		<h2 id="la_pater">Notre Père</h2>
+
+		<h2 id="la_titre_oraison">Prière</h2>
+		<div id="la_oraison"></div>
+		<div id="la_conclusion">
+			<h2>Bénédiction</h2>
+			<p class="antienne rouge">Si l'office est présidé par un prêtre ou un diacre&nbsp;:</p>
+			<p>Le Seigneur soit avec vous.<br>
+			<span class="liturgie rouge">R</span> Et avec votre esprit.</P>
+			<p>Que Dieu tout-puissant vous bénisse,<br>
+			le Père, le Fils et le Saint-Esprit. Amen.</p>
+			<p>Bénissons le Seigneur.<br>
+			<span class="liturgie rouge">R</span> Nous rendons grâce à Dieu.</p>
+			<p class="antienne rouge">Si l'office n'est pas présidé par un prêtre ou un diacre, et dans la récitation privée&nbsp;:</p>
+			<p>Que le Seigneur vous bénisse,<br>
+			qu'il nous garde de tout mal<br>
+			et nous conduise à la vie éternelle. Amen.</p>
+			<p class="antienne rouge">ou</p>
+			<p>Que le Dieu de l'espérance vous remplisse<br>
+			de toute joie et de toute paix<br>
+			dans la foi. Amen</p>
+		</div>
+		<p class="center"><ons-button onclick="Charge_page('accueil.html')"><ons-icon icon="md-home"></ons-icon></ons-button></p>
+
+	</ons-card>
+	<script>
+		Initialisation_parametres();
+Initialisation_evenements('laudes');
+	</script>
+</ons-page>

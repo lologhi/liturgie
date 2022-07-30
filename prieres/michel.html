@@ -1,0 +1,26 @@
+<ons-page id=’prieres-michel’>
+	<ons-toolbar class=’barre-menu’>
+		<div class="left bouton_menu_g" onclick="Ouvre_menu_g()">
+			<ons-icon icon="md-menu"></ons-icon>&nbsp;&nbsp;Prières
+		</div>
+		<div class="center">
+			S. Michel Archange
+		</div>
+	</ons-toolbar>
+
+	<ons-card class="cadre">
+		<div id="pmichel_select_div">
+			<select class="select-input" name="pmichel_select" id="pmichel_select">
+			</select>
+		</div>
+		<div id="pmichel_texte"></div>
+
+		<p class="center">~<br><br>
+		<ons-button onclick="Charge_page('prieres.html')"><ons-icon icon="md-menu"></ons-icon></ons-button></p>
+	</ons-card>
+
+	<script>
+		Initialisation_parametres();
+Select_dynamique_init('#pmichel_select', 'prieres/michel_menu.html', '#pmichel_texte', 'prieres/', '.html');
+	</script>
+</ons-page>

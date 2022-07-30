@@ -1,0 +1,31 @@
+<script>
+var path_propre = 'sanctoral/paques/P-';
+var propre = ['m_antienne_1',
+		'm_antienne_2',
+		'm_antienne_3',
+		'm_capitule1',
+		'm_repons1',
+		'm_capitule2',
+		'm_repons2',
+		'm_capitule3',
+		'm_repons3'
+];
+
+
+sessionStorage.setItem('m_titre_sanctoral', path_propre+'titre.html');
+sessionStorage.setItem('m_titre_secondaire', '');
+
+$('#m_titre_hymne1').html('<h2>Hymne</h2> <div id="m_hymne1"></div>');
+$('#m_hymne1').load('milieu/hymnes/hymne1_5.html');
+$('#m_titre_hymne2').hide();
+$('#m_titre_hymne3').hide();
+
+sessionStorage.setItem('m_psaume_1', '117-I');
+sessionStorage.setItem('m_psaume_2', '117-II');
+sessionStorage.setItem('m_psaume_3', '117-III');
+
+for (var i=0; i < propre.length; i++) {
+	sessionStorage.setItem(propre[i], path_propre+propre[i]+'.html');
+}
+
+</script>

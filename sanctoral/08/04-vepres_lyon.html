@@ -1,0 +1,26 @@
+<script>
+var path_propre = 'sanctoral/08/04-';
+var path_commun = 'sanctoral/pasteurs/';
+
+sessionStorage.setItem('v_titre_sanctoral', path_propre+'titre_lyon.html');
+
+var commun = ['v_hymne',
+            'v_antienne_1',
+            'v_antienne_2',
+            'v_antienne_cantique',
+            'v_capitule',
+            'v_repons',
+            'v_antienne_ev',
+            'v_intercession'
+];
+
+sessionStorage.setItem('v_psaume_1', '14');
+sessionStorage.setItem('v_psaume_2', '111');
+sessionStorage.setItem('v_cantique', '11');
+
+for (var i=0; i < commun.length; i++) {
+	sessionStorage.setItem(commun[i], path_commun+commun[i]+'.html');
+}
+
+sessionStorage.setItem('v_oraison', path_propre+'oraison.html');
+</script>

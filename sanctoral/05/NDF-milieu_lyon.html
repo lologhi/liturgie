@@ -1,0 +1,23 @@
+<script>
+var path = 'sanctoral/05/NDF-';
+var propre = ['m_antienne_1',
+		'm_antienne_2',
+		'm_antienne_3',
+		'm_capitule1',
+		'm_repons1',
+		'm_capitule2',
+		'm_repons2',
+		'm_capitule3',
+		'm_repons3'
+];
+
+sessionStorage.setItem('m_titre_sanctoral', path+'titre_lyon.html');
+
+for (var i=0; i < propre.length; i++) {
+	sessionStorage.setItem(propre[i], path+propre[i]+'_lyon.html');
+}
+
+sessionStorage.setItem('m_oraison1', path+'oraison_lyon.html');
+sessionStorage.setItem('m_oraison2', path+'oraison_lyon.html');
+sessionStorage.setItem('m_oraison3', path+'oraison_lyon.html');
+</script>

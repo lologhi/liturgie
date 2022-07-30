@@ -1,0 +1,70 @@
+<ons-page id="p_t1">
+	<ons-card class="cadre">
+		<ons-list>
+			<ons-list-header>Propres régionaux</ons-list-header>
+			<ons-list-item>
+				<label class="checkbox">
+					<input type="checkbox" class="checkbox__input" name="afriquen" id="afriquen"/>
+					<div class="checkbox__checkmark"></div>
+					Propre de l'Afrique
+				</label>
+			</ons-list-item>
+			<ons-list-item>
+				<label class="checkbox">
+					<input type="checkbox" class="checkbox__input" name="europe" id="europe"/>
+					<div class="checkbox__checkmark"></div>
+					Propre de l'Europe
+				</label><br>
+			</ons-list-item>
+			<ons-list-item>
+				<label class="checkbox">
+					<input type="checkbox" class="checkbox__input" name="belgique" id="belgique"/>
+					<div class="checkbox__checkmark"></div>
+					Propre de la Belgique
+				</label><br>
+			</ons-list-item>
+			<ons-list-item>
+				<label class="checkbox">
+					<input type="checkbox" class="checkbox__input" name="canada" id="canada"/>
+					<div class="checkbox__checkmark"></div>
+					Propre du Canada
+				</label><br>
+			</ons-list-item>
+			<ons-list-item>
+				<label class="checkbox">
+					<input type="checkbox" class="checkbox__input" name="france" id="france"/>
+					<div class="checkbox__checkmark"></div>
+					Propre de la France
+				</label><br>
+			</ons-list-item>
+			<ons-list-item>
+				<label class="checkbox">
+					<input type="checkbox" class="checkbox__input" name="luxembourg" id="luxembourg"/>
+					<div class="checkbox__checkmark"></div>
+					Propre du Luxembourg
+				</label><br>
+			</ons-list-item>
+			<ons-list-item>
+				<label class="checkbox">
+					<input type="checkbox" class="checkbox__input" name="suisse" id="suisse"/>
+					<div class="checkbox__checkmark"></div>
+					Propre de la Suisse
+				</label><br>
+			</ons-list-item>
+			<ons-list-item>
+				<div class="left">
+					Diocèse&nbsp;: 
+					<ons-select id="diocese" name="diocese" modifier='underbar'>
+						<option value=""></option>
+						<option value="lille">Lille</option>
+						<option value="lyon">Lyon</option>
+						<option value="paris">Paris</option>
+					</ons-select>
+				</div>
+			</ons-list-item>
+		</ons-list>
+	</ons-card>
+	<script>
+		Validation_parametres();
+	</script>
+</ons-page>

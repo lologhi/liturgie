@@ -1,0 +1,38 @@
+<script>
+var path_propre = 'sanctoral/09/16-';
+var path_commun= 'sanctoral/martyr/';
+var commun0 = ['v0_hymne',
+	'v0_antienne_1',
+	'v0_antienne_2',
+	'v0_antienne_cantique',
+	'v0_capitule',
+	'v0_repons',
+	'v0_antienne_ev',
+	'v0_intercession'
+];
+var commun = ['v_hymne',
+	'v_antienne_1',
+	'v_antienne_2',
+	'v_antienne_cantique',
+	'v_capitule',
+	'v_repons',
+	'v_antienne_evm',
+	'v_intercession'
+];
+
+sessionStorage.setItem('v_titre_sanctoral', path_propre+'titre_afriquen.html');
+sessionStorage.setItem('v_titre_secondaire', '');
+sessionStorage.setItem('v_premieres_vepres', '<p class="rouge"><i>Premières vêpres</i></p>');
+Charge_label_txt('v_premieres_vepres');
+
+sessionStorage.setItem('v_psaume_1', '117-1');
+sessionStorage.setItem('v_psaume_2', '117-2');
+sessionStorage.setItem('v_cantique', '8');
+sessionStorage.setItem('v_antienne_ev2', '');
+
+for (var i=0; i < commun.length; i++) {
+	sessionStorage.setItem(commun[i], path_commun+commun0[i]+'.html');
+}
+
+sessionStorage.setItem('v_oraison', path_propre+'oraison_afriquen.html');
+</script>
