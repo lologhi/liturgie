@@ -217,3 +217,9 @@ Si un office n’est pas modifié (eg. milieu du jour pour une mémoire), dans c
 | `v_antienne_ev2b` | Reprend la valeur de `l_antienne_ev2`... |
 | `v_intercession` |  |
 | `v_oraison` |  |
+
+## B. Participer au développement
+
+Cette application s'appuie sur le framework **Cordova** d'Apache. Si on ouvre le fichier `index.html` dans son navigateur, rien ne se passe car le script `cordova.js` est manquant. Il y a plusieurs façons de régler ce problème. La plus simple est d'obtenir une copie de ce fichier. Si on souhaite éviter d'installer le package Nodejs de Cordova, une copie est disponible [ici](https://gist.github.com/a2ohm/e3ed0691b089ded4d6b53e22849790b5).
+
+Enfin, pour respecter les politiques de sécurité des navigateurs, il faut aussi mettre en place un serveur local pour tester l'application sur son ordinateur ([source](https://developer.mozilla.org/fr/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp#chargement_dun_fichier_local)). Avec python, la commande `python3 -m http.server` exécutée dans le dossier local du projet suffit. L'application est alors accessible à l'adresse suivante `http://localhost:8000/` ([source](https://developer.mozilla.org/fr/docs/Learn/Common_questions/set_up_a_local_testing_server) ).
