@@ -229,9 +229,17 @@ function Mode_nuit() {
 
 	var mode_nuit=(localStorage.getItem("mode_nuit") === 'true');
 	if (mode_nuit) {
-		$("#css-onsen1").attr('href',"include/onsenui/onsen-css-components-night.min.css");
+		// Pour les écrans AMOLED, un arrière plan vraiment noir peut être
+		// plus confortable, et cela économise de la batterie
+		var ecran_amoled=(localStorage.getItem("ecran_amoled") === 'true');
+		if (ecran_amoled) {
+			$("#css-onsen1").attr('href',"include/onsenui/onsen-css-components-black.min.css");
+		} else {
+			$("#css-onsen1").attr('href',"include/onsenui/onsen-css-components-night.min.css");
+		}
 		$("#css-onsen2").attr('href',"include/onsenui/theme-night.css");
 		$("#css-lh").attr('href',"include/lh-night.css");
+		
 	} else {
 		$("#css-onsen1").attr('href',"include/onsenui/onsen-css-components.min.css");
 		$("#css-onsen2").attr('href',"include/onsenui/theme.css");
