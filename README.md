@@ -220,6 +220,72 @@ Si un office n’est pas modifié (eg. milieu du jour pour une mémoire), dans c
 
 ## B. Participer au développement
 
+### 1. Mise en place simple
+
 Cette application s'appuie sur le framework **Cordova** d'Apache. Si on ouvre le fichier `index.html` dans son navigateur, rien ne se passe car le script `cordova.js` est manquant. Il y a plusieurs façons de régler ce problème. La plus simple est d'obtenir une copie de ce fichier. Si on souhaite éviter d'installer le package Nodejs de Cordova, une copie est disponible [ici](https://gist.github.com/a2ohm/e3ed0691b089ded4d6b53e22849790b5).
 
 Enfin, pour respecter les politiques de sécurité des navigateurs, il faut aussi mettre en place un serveur local pour tester l'application sur son ordinateur ([source](https://developer.mozilla.org/fr/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp#chargement_dun_fichier_local)). Avec python, la commande `python3 -m http.server` exécutée dans le dossier local du projet suffit. L'application est alors accessible à l'adresse suivante `http://localhost:8000/` ([source](https://developer.mozilla.org/fr/docs/Learn/Common_questions/set_up_a_local_testing_server) ).
+
+### 2. Mise en place complète de l'environnement de développement
+
+#### a) Cordova
+Installer Cordova.
+- `sudo apt install nodejs npm`
+- `npm install -g cordova`
+
+Créer le projet.
+- `cordova create liturgie-des-heures`
+
+Cloner le code source de l'application
+- `cd liturgie-des-heures/www`
+- `git clone https://github.com/lologhi/liturgie.git`
+
+Mettre en place les plateformes sur lesquelles l'application sera testée.
+- `cd ..`
+- (navigateur) : `cordova platform add browser`
+- (téléphone android) : `cordova platform add android`
+
+#### b) Tester dans son navigateur
+- `cordova build browser`
+- `cordova run browser`
+
+#### c) Tester sur son téléphone Android
+
+**Pré-requis** ([source](https://stackoverflow.com/questions/34556884/how-to-install-android-sdk-on-ubuntu))
+
+Installer le Java Development Kit.
+- `sudo apt install default-jdk`
+
+Télécharger les outils du sdk android depuis [ce site](https://developer.android.com/studio#command-tools) (chercher la section "Command line tools only").
+Puis …
+- `unzip commandlinetools-linux-8512546_latest.zip`
+- `rm commandlinetools-linux-8512546_latest.zip`
+- `mkdir -p android-sdk/cmdline-tools/`
+- `mv cmdline-tools/ android-sdk/cmdline-tools/latest`
+
+Ajouter dans `~/.bash_profile` :
+
+    # Export the Android SDK path 
+    export ANDROID_SDK_ROOT=$HOME/android-sdk
+    export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/
+    export PATH=$PATH:$ANDROID_SDK_ROOT/build-tools/
+    export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin
+
+Puis …
+- `source ~/.bash_profile`
+- `sdkmanager "platform-tools" "platforms;android-30" "build-tools;30.0.3"`
+
+*Rmq.*
+- `platforms;android-30` − Pour choisir le numéro de version il suffit de ce reporter à [ce tableau](https://cordova.apache.org/docs/en/11.x/guide/platforms/android/index.html#android-api-level-support) avec le numéro de version de cordova-android (`cordova platform ls`).
+- `build-tools;30.0.3` − C'est le numéro de version que me demande cordova dans le message d'erreur renvoyé par `cordova build android` lorsque les build-tools n'étaient pas encore installés.
+
+Activer sur son téléphone le mode développeur (cliquer n fois sur le numéro de version du kernel).
+Dans les options de développements, activer le débogage USB.
+Brancher le téléphone. (Si besoin, dans le menu des paramètres USB, choisir l'option "USB contrôlé par cet appareil".)
+
+**Tester**
+
+- `cordova build android`
+- `cordova run android`
+
+*Rmq.* Il peut être nécessaire de débrancher rebrancher le téléphone avant la commande `cordova run android`. Aussi, bien vérifier que le débogage USB est activé.
