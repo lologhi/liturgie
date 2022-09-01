@@ -1628,6 +1628,9 @@ function Initialisation_parametres() {
 	if (localStorage.getItem("mode_nuit") === null) {
 		localStorage.setItem('mode_nuit',false);
 	}
+	if (localStorage.getItem("ecran_amoled") === null) {
+		localStorage.setItem('ecran_amoled',false);
+	}
 	// nécessaire pour assurer la transition depuis les anciennes versions
 	// où les valeurs pour les repeter... étaient '0' ou '1'
 	if (localStorage.getItem('repeter_antiennes') === '1') {
@@ -1696,6 +1699,13 @@ function Validation_parametres() {
 	$('#mode_nuit').attr('checked', mode_nuit); 
 	$('#mode_nuit').bind('change', function (event) {
 		localStorage.setItem('mode_nuit', document.getElementById('mode_nuit').checked);
+		Mode_nuit();
+	});
+
+	var ecran_amoled = localStorage.getItem('ecran_amoled') === 'true';
+	$('#ecran_amoled').attr('checked', ecran_amoled); 
+	$('#ecran_amoled').bind('change', function (event) {
+		localStorage.setItem('ecran_amoled', document.getElementById('ecran_amoled').checked);
 		Mode_nuit();
 	});
 
